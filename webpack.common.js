@@ -51,10 +51,6 @@ module.exports = {
     ]
   },
 
-  output: {
-    publicPath: '/',
-  },
-
   resolve: {
     extensions: ['.js', '.vue'],
     modules: ['node_modules', 'src']
