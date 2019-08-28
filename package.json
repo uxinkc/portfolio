@@ -1,7 +1,7 @@
 {
-  "name": "fsa-prototype-kit",
-  "version": "1.1.0",
-  "description": "Baseline Prototype Kit using Webpack and FSA Style as a dependency.",
+  "name": "portfoliokit",
+  "version": "1.0.0",
+  "description": "Portfolio create with the PrototKit.",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --config webpack.dev.js",
@@ -12,12 +12,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/usda-fsa/fsa-style.git"
+    "url": "git+https://github.com/uxinkc/portfolio.git"
   },
-  "author": "USDA FSA Enterprise Architecture",
+  "author": "Casey Hill",
   "contributors": [
-    "Casey Hill <bignamehere@gmail.com> (https://github.com/bignamehere)",
-    "Francis Rupert <France.Rupert@gmail.com> (https://github.com/francisrupert)"
+    "Casey Hill <bignamehere@gmail.com> (https://github.com/bignamehere)"
   ],
   "devDependencies": {
     "@babel/core": "^7.5.5",
