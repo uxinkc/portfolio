@@ -1,7 +1,7 @@
 {
-  "name": "portfoliokit",
+  "name": "uxinkc",
   "version": "1.0.0",
-  "description": "Portfolio create with the PrototKit.",
+  "description": "Portfolio and insights",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --config webpack.dev.js",
@@ -16,7 +16,7 @@
   },
   "author": "Casey Hill",
   "contributors": [
-    "Casey Hill <bignamehere@gmail.com> (https://github.com/bignamehere)"
+    "Casey Hill <uxinkc@gmail.com> (https://github.com/uxinkc)"
   ],
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -26,9 +26,7 @@
     "clean-webpack-plugin": "^0.1.19",
     "copy-webpack-plugin": "^4.5.1",
     "css-loader": "^3.2.0",
-    "ds-style": "^1.1.4",
     "file-loader": "^1.1.11",
-    "fsa-style": "^2.3.3",
     "gh-pages": "^2.1.1",
     "handlebars": "^4.0.11",
     "handlebars-loader": "^1.7.1",
