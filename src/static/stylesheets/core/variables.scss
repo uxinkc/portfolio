@@ -1,0 +1,15 @@
+
+$size-base          : .4rem;            // 4px
+$size-small         : $size-base * 2;   // 8px
+$size-default       : $size-base * 3;   // 12px
+$size-medium        : $size-base * 6;   // 24px
+$size-large         : $size-base * 9;   // 36px
+$size-extra-large   : $size-medium * 2; // 48px
+
+$site-max-width: 1200px;
+$content-max-width: 800px;
+
+$screen-s  : 30.0625em; //  481px at 16px base font
+$screen-m  : 37.5em;    //  600px at 16px base font
+$screen-l  : 54em;      //  864px at 16px base font
+$screen-xl : 78.75em;   // 1260px at 16px base font

@@ -2,8 +2,8 @@
 <template>
   <div>
     <baseHeader></baseHeader>
-    <h1>Home</h1>
-    <p>This is home</p>
+    <h1>Contact</h1>
+    <p>This is how you contact me</p>
     <baseFooter></baseFooter>
   </div>
 </template>

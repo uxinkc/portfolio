@@ -51,7 +51,7 @@ module.exports = merge(common, {
 
   plugins: [
     new StyleLintPlugin({
-      context: '../src/static/stylesheets/base.scss'
+      context: '../src/static/stylesheets/main.scss'
     })
   ]
 });

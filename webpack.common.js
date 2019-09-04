@@ -18,7 +18,7 @@ let customizations = {
   fsaStyleFontsPath: path.join(basePath, 'node_modules/fsa-style/src/fonts/'),
   fsaStyleSCSSPath: path.join(basePath, 'node_modules/fsa-style/src/stylesheets/fsa-style.scss'),
   fsaStyleJSPath: path.join(basePath, 'node_modules/fsa-style/src/js/main.js'),
-  mainStylePath: path.join(basePath, 'src/static/stylesheets/base.scss')
+  mainStylePath: path.join(basePath, 'src/static/stylesheets/main.scss')
 };
 
 // build array of sources from fsa-style in node_modules
@@ -45,7 +45,7 @@ module.exports = {
 
   entry: {
     'main': [
-      './src/static/stylesheets/base.scss',
+      './src/static/stylesheets/main.scss',
       customizations.fsaStyleJSPath,
       './src/app.js'
     ]
