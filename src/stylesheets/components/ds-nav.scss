@@ -1,0 +1,176 @@
+.ds-nav {
+
+  $nav-spacing-unit: $size-default;
+  border-bottom: 1px solid $ds-color-nav-border;
+  width: 100%;
+
+	&__bd {
+
+    height: $ds-nav-height;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: stretch;
+
+    @include breakpoint(S) {
+
+    }
+
+    @include breakpoint(L) {
+
+    }
+
+  }
+
+	&__brand {
+
+    flex-grow: 1;
+
+    font-size: $size-medium;
+    padding-top: $size-base;
+
+    @include breakpoint(S) {
+    }
+
+    @include breakpoint(M) {
+    }
+
+    @include breakpoint(L) {
+    }
+  }
+  
+  &__controls {
+
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: stretch;
+
+    visibility: hidden;
+    display: none;
+
+    @include breakpoint(S) {
+      visibility: hidden;
+      display: none;
+    }
+
+    @include breakpoint(L) {
+      //visibility: visible;
+      //display: initial;
+      visibility: hidden;
+      display: none;
+    }
+
+    &-item {
+      align-content: flex-start;
+    }
+	}
+
+	&__menu {
+
+    
+    padding: 0;
+
+    @include breakpoint(S) {
+      visibility: hidden;
+      display: none;
+    }
+
+    @include breakpoint(L) {
+      visibility: visible;
+      display: inherit;
+    }
+
+    &-list {
+      
+      @include reset-ul();
+      display: flex;
+      position: relative;
+      flex-wrap: wrap;
+      z-index: 3;
+
+      @include breakpoint(S) {
+        display: block;
+        position: relative;
+        flex-wrap: wrap;
+      }
+
+    }
+
+    &-list-item {
+
+      @include reset-li();
+      
+      padding: $size-default;
+      display: inline-block;
+      
+    }
+  }
+
+  &__hamburger {
+
+    @include breakpoint(S) {
+      visibility: visible;
+    }
+
+    @include breakpoint(L) {
+      visibility: hidden;
+    }
+
+    &-icon  {
+
+      cursor: pointer;
+
+      position: relative;
+      top: 16px;
+      right: 18px;
+      width: 28px;
+
+      &-line1,
+      &-line2,
+      &-line3 {
+        width: 100%;
+        height: 2px;
+        background-color: #393939;
+        margin: 6px 0;
+        transition: .4s;
+        border-radius: 10px
+      }
+
+      &-hide {
+        visibility: hidden;
+      }
+    }
+    
+  }	
+
+
+
+  &__mobile-menu {
+
+    font-size: $ds-font-size-6;
+    background-color: bisque;
+    padding: $size-medium;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    display: none;
+    visibility: hidden;
+
+    &-list {
+      @include reset-ul();
+      text-align: center;
+
+      &-item {
+        @include reset-li();
+        padding: $size-medium;
+      }
+    }
+
+    &-show {
+      display: flex;
+      visibility: visible;
+    }
+
+  }
+}

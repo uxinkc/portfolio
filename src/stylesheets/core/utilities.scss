@@ -1,0 +1,69 @@
+$breakpoints: (
+  '(min-width: #{$screen-s})' 'S',
+  '(min-width: #{$screen-m})' 'M',
+  '(min-width: #{$screen-l})' 'L',
+  '(min-width: #{$screen-xl})' 'XL'
+);
+
+
+@mixin breakpoint($point, $direction: 'up') {
+  @each $breakpoint in $breakpoints {
+    $query: nth($breakpoint, 1);
+    $name: nth($breakpoint, 2);
+
+    @if $direction == up {
+      @if ($name == $point) {
+        @media #{$query} { @content }
+      }
+    } @else {
+      @if ($name == $point) {
+        @media #{str-replace($query, "min", "max")} {
+          @content
+        }
+      }
+    }
+  }
+}
+
+@mixin reset-ul() {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin reset-li() {
+
+  display: list-item;
+  margin: 0;
+  padding: 0;
+}
+
+
+@mixin reset-button() {
+  text-align: left;
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  line-height: inherit;
+  cursor: pointer;
+  user-select: text;
+
+  &::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+}
+
+@mixin font-smoothing($value: on) {
+  @if $value == on {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  } @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}

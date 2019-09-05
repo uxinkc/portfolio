@@ -1,8 +1,10 @@
 <template>
   <footer>
-    
-    <legalText :LEGAL="getLegal"></legalText>
-
+    <div class="ds-footer">
+      <div class="ds-footer__bd">
+        <legalText :LEGAL="getLegal"></legalText>
+      </div>
+    </div>
   </footer>
 </template>
 

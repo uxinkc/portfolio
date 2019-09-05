@@ -1,0 +1,13 @@
+.ds-header {
+  min-height: $ds-header-height;
+  display: flex; 
+  flex-flow: row nowrap;
+  width: 100%;
+  z-index: 999;
+  
+  &__bd {
+    margin-right: auto;
+    margin-left: auto;
+    width: $ds-site-max-width;
+  }
+}

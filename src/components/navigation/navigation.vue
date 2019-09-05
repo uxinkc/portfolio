@@ -1,83 +1,100 @@
 <template>
   <nav>
     <div class="ds-nav">
-      <div class="ds-nav__container">
+      <div class="ds-nav__bd">
+        <!-- Brand -->
         <div class="ds-nav__brand">
           <span class="ds-nav__brand-text">UX in KC</span>
         </div>
+        <!-- Controls -->
         <div class="ds-nav__controls">
-          <div class="ds-search ds-search--large">
-            <div class="ds-search__entry">
-              <div class="ds-field ds-field--block">
-                <input name="search" type="text">
-              </div>
+          <div class="ds-nav__controls-item">
+            <div class="ds-field ds-field--block">
+              <input name="search" type="text">
             </div>
-            <div class="ds-search__btn">
+            <div class="ds-nav__controls-item">
               <button class="ds-btn ds-btn__icon-search">Search</button>
             </div>
           </div>
         </div>
-        <div class="ds-nav__navigation">
-          <div class="ds-nav__navigation-links">
-            <ul>
-              <li>
-                <router-link to="/">Home</router-link>
-              </li>
-              <li>
-                <router-link to="/insights">Insights</router-link>
-              </li>
-              <li>
-                <router-link to="/projects">Projects</router-link>
-              </li>
-              <li>
-                <router-link to="/contact">Contact</router-link>
-              </li>
-            </ul>
+        <!-- Menu -->
+        <div class="ds-nav__menu">
+          <ul class="ds-nav__menu-list">
+            <li class="ds-nav__menu-list-item">
+              <router-link to="/">
+                <span class="ds-nav__text">Home</span>
+              </router-link>
+            </li>
+            <li class="ds-nav__menu-list-item">
+              <router-link to="/insights">
+                <span class="ds-nav__text">Insights</span>
+              </router-link>
+            </li>
+            <li class="ds-nav__menu-list-item">
+              <router-link to="/projects">
+                <span class="ds-nav__text">Projects</span>
+              </router-link>
+            </li>
+            <li class="ds-nav__menu-list-item">
+              <router-link to="/contact">
+                <span class="ds-nav__text">Contact</span>
+              </router-link>
+            </li>
+          </ul>
+        </div>
+        <!-- Mobile Nav -->
+        <div class="ds-nav__hamburger">
+          <div @click="openNav" class="ds-nav__hamburger-icon">
+            <div class="ds-nav__hamburger-icon-line1"></div>
+            <div class="ds-nav__hamburger-icon-line2"></div>
+            <div class="ds-nav__hamburger-icon-line3"></div>
           </div>
         </div>
-        <div class="ds-nav__navigation-btn">
-          <div class="ds-nav__menu-icon">
-            <span class="ds-nav__menu-icon-line-1"></span>
-            <span class="ds-nav__menu-icon-line-2"></span>
-            <span class="ds-nav__menu-icon-line-3"></span>
-          </div>
-        </div>
-
-        <div class="ds-nav-mobile-overlay">
-          <div class="ds-nav-mobile-overlay__popup-nav">
-            <div class="ds-nav-mobile-overlay__popup-nav-wrapper">
-              <div class="ds-nav-mobile-overlay__popup-nav-items-container">
-                <ul class="ds-nav-mobile-overlay__popup-nav-items">
-                  <li class="ds-nav-mobile-overlay__popup-nav-item-container scroll-link">
-                    <a href="/">
-                      <p class="ds-nav-mobile-overlay__popup-nav-item">Home</p>
-                    </a>
-                  </li>
-                  <li class="ds-nav-mobile-overlay__popup-nav-item-container">
-                    <a href="/insights">
-                      <p class="ds-nav-mobile-overlay__popup-nav-item">Insights</p>
-                    </a>
-                  </li>
-                  <li class="ds-nav-mobile-overlay__popup-nav-item-container">
-                    <a href="/projects">
-                      <p class="ds-nav-mobile-overlay__popup-nav-item">Projects</p>
-                    </a>
-                  </li>
-                  <li class="ds-nav-mobile-overlay__popup-nav-item-container">
-                    <a href="/contact">
-                      <p class="ds-nav-mobile-overlay__popup-nav-item">Contact</p>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+        <!-- Account -->
       </div>
+    </div>
+    <!-- Mobile Nav Flyout -->
+    <div id="MobileNav" class="ds-nav__mobile-menu">
+      <ul class="ds-nav__mobile-menu-list">
+        <li class="ds-nav__mobile-menu-list-item">
+          <router-link to="/">
+            <span class="ds-nav__mobile-text">Home</span>
+          </router-link>
+        </li>
+        <li class="ds-nav__mobile-menu-list-item">
+          <router-link to="/insights">
+            <span class="ds-nav__mobile-text">Insights</span>
+          </router-link>
+        </li>
+        <li class="ds-nav__mobile-menu-list-item">
+          <router-link to="/projects">
+            <span class="ds-nav__mobile-text">Projects</span>
+          </router-link>
+        </li>
+        <li class="ds-nav__mobile-menu-list-item">
+          <router-link to="/contact">
+            <span class="ds-nav__mobile-text">Contact</span>
+          </router-link>
+        </li>
+      </ul>
     </div>
   </nav>
 </template>
 
 <script>
+export default {
+  
+  methods: {
 
+    openNav: function(e){
+      let nav = e.currentTarget;
+      nav.classList.add('ds-nav__hamburger-icon-hide');
+
+      let mobileNav = document.getElementById('MobileNav');
+      mobileNav.classList.add('ds-nav__mobile-menu-show');
+
+    }
+
+  }
+}
 </script>

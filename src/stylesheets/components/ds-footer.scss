@@ -1,0 +1,14 @@
+.ds-footer {
+  min-height: $ds-footer-height;
+  display: flex; 
+  flex-flow: row nowrap;
+  width: 100%;
+  border-top: 1px solid $ds-color-nav-border;
+  z-index: 999;
+  
+  &__bd {
+    margin-right: auto;
+    margin-left: auto;
+    width: $ds-site-max-width;
+  }
+}

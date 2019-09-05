@@ -1,0 +1,46 @@
+
+$size-base          : .4rem;            // 4px
+$size-small         : $size-base * 2;   // 8px
+$size-default       : $size-base * 3;   // 12px
+$size-medium        : $size-base * 6;   // 24px
+$size-large         : $size-base * 9;   // 36px
+$size-extra-large   : $size-medium * 2; // 48px
+
+$screen-s  : 30.0625em; //  481px at 16px base font
+$screen-m  : 37.5em;    //  600px at 16px base font
+$screen-l  : 54em;      //  864px at 16px base font
+$screen-xl : 78.75em;   // 1260px at 16px base font
+
+$ds-color-primary: #333333;
+$ds-color-secondary: #555555;
+$ds-color-tertiary: #999999;
+
+$ds-font-color: $ds-color-primary;
+$ds-fonts: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
+
+$ds-color-nav-bg: #FFFFFF;
+$ds-color-nav-text: #222222;
+$ds-color-nav-link: #0000AA;
+$ds-color-nav-border: #EEEEEE;
+
+
+// Font Size Scale
+$ds-font-size-0 : 13px;
+$ds-font-size-1 : 14px;
+$ds-font-size-2 : 15px;
+$ds-font-size-3 : 17px;
+$ds-font-size-4 : 20px;
+$ds-font-size-5 : 30px;
+$ds-font-size-6 : 42px;
+$ds-font-size-7 : 52px;  
+
+$ds-font-size--default: $ds-font-size-3;
+
+$ds-site-max-width: 1200px;
+$ds-content-max-width: 800px;
+$ds-header-height: 60px; 
+$ds-footer-height: 140px;
+$ds-content-height-S: 200px;
+$ds-content-height-M: 400px;
+$ds-content-height-L: 600px;
+$ds-nav-height: $ds-header-height;

@@ -1,9 +1,11 @@
 
 <template>
-  <div>
+  <div class="ds-content">
     <baseHeader></baseHeader>
-    <h1>Home</h1>
-    <p>This is home</p>
+    <div class="ds-main">
+      <h1>Home</h1>
+      <p>This is home</p>
+    </div>
     <baseFooter></baseFooter>
   </div>
 </template>

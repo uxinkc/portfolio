@@ -1,0 +1,68 @@
+html {
+  scroll-behavior: smooth;
+}
+
+html { 
+	box-sizing: border-box;
+}
+
+* {
+&,
+&::after,
+&::before {
+  box-sizing: inherit;
+}
+}
+
+body {
+
+  overflow-x: initial;
+  
+  
+  color: $ds-font-color;
+  font-family: $ds-fonts;
+	padding: 0;
+	margin: 0;
+  
+  display: flex;
+  flex-direction: column;
+  
+  margin-left: auto;
+	margin-right: auto;
+
+	@media print {
+		background-color: transparent;
+	}
+}
+
+main:focus,
+main[tabindex]:focus {
+  outline: 0;
+}
+
+
+@media print {
+	@page {
+		size: (8.5in * 1.75) (11in * 1.75);
+	}
+}
+
+.ds-main {
+  margin-right: auto;
+  margin-left: auto;
+  width: $ds-site-max-width;
+  min-height: $ds-content-height-S;
+
+  @include breakpoint(S) {
+    min-height: $ds-content-height-S;
+  }
+
+  @include breakpoint(S) {
+    min-height: $ds-content-height-M;
+  }
+
+  @include breakpoint(L) {
+    min-height: $ds-content-height-L;
+  }
+
+}

@@ -1,8 +1,10 @@
 <template>
   <header>
-    
-    <navigation></navigation>
-
+    <div class="ds-header">
+      <div class="ds-header__bd">
+        <navigation></navigation>
+      </div>
+    </div>
   </header>
 </template>
 

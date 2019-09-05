@@ -14,17 +14,17 @@ const basePath = process.cwd();
 
 let customizations = {
 
-  fsaStyleImgPath: path.join(basePath, 'node_modules/fsa-style/src/img/'),
-  fsaStyleFontsPath: path.join(basePath, 'node_modules/fsa-style/src/fonts/'),
-  fsaStyleSCSSPath: path.join(basePath, 'node_modules/fsa-style/src/stylesheets/fsa-style.scss'),
-  fsaStyleJSPath: path.join(basePath, 'node_modules/fsa-style/src/js/main.js'),
-  mainStylePath: path.join(basePath, 'src/static/stylesheets/main.scss')
+  //fsaStyleImgPath: path.join(basePath, 'node_modules/fsa-style/src/img/'),
+  //fsaStyleFontsPath: path.join(basePath, 'node_modules/fsa-style/src/fonts/'),
+  //fsaStyleSCSSPath: path.join(basePath, 'node_modules/fsa-style/src/stylesheets/fsa-style.scss'),
+  //fsaStyleJSPath: path.join(basePath, 'node_modules/fsa-style/src/js/main.js'),
+  mainStylePath: path.join(basePath, 'src/stylesheets/main.scss')
 };
 
 // build array of sources from fsa-style in node_modules
 let styleArray = [];
 
-styleArray.push(customizations.fsaStyleSCSSPath);
+//styleArray.push(customizations.fsaStyleSCSSPath);
 styleArray.push(customizations.mainStylePath);
 
 const postCssLoader = {
@@ -45,8 +45,8 @@ module.exports = {
 
   entry: {
     'main': [
-      './src/static/stylesheets/main.scss',
-      customizations.fsaStyleJSPath,
+      './src/stylesheets/main.scss',
+      //customizations.fsaStyleJSPath,
       './src/app.js'
     ]
   },
@@ -162,6 +162,7 @@ module.exports = {
               'includePaths': []
             }
           },
+          /*
           {
             loader: "@epegzz/sass-vars-loader",
             options: {
@@ -175,6 +176,7 @@ module.exports = {
               }
             }
           },
+          */
           {
             loader: 'sass-resources-loader',
             options: {
@@ -248,6 +250,7 @@ module.exports = {
         from: './src/static/fonts/',
         to: './fonts/'
       },
+      /*
       {
         from: customizations.fsaStyleImgPath,
         to: './img/'
@@ -256,6 +259,7 @@ module.exports = {
         from: customizations.fsaStyleFontsPath,
         to: './fonts/'
       }
+      */
     ]),
     
     new MiniCssExtractPlugin({
