@@ -17,18 +17,16 @@ html {
 body {
 
   overflow-x: initial;
-  
-  
-  color: $ds-font-color;
-  font-family: $ds-fonts;
-	padding: 0;
-	margin: 0;
-  
   display: flex;
   flex-direction: column;
-  
+	padding: 0;
+	margin: 0;
   margin-left: auto;
 	margin-right: auto;
+
+  font-size: $ds-font-size;  
+  color: $ds-font-color;
+  font-family: $ds-fonts;
 
 	@media print {
 		background-color: transparent;

@@ -1,0 +1,70 @@
+html {
+    font-family: $ds-fonts;
+    font-size: $ds-em-base;
+  }
+  
+  body {
+    font-size: $ds-base-font-size;
+  }
+  
+  p {
+    line-height: $ds-base-line-height;
+    margin-bottom: 1em;
+    margin-top: 1em;
+  }
+  
+  a {
+    color: $ds-color-primary;
+    text-decoration: underline;
+  
+    &:hover,
+    &:active {
+      color: $ds-color-nav-link;
+    }
+  
+    &:focus {
+      @include focus;
+    }
+  
+    &:visited {
+      color: $color-visited;
+    }
+  }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+  font-family: $ds-fonts;
+  line-height: $ds-heading-line-height;
+  margin-bottom: 0.5em;
+  margin-top: 1.5em;
+}
+
+h1 {
+  @include h1();
+}
+
+h2 {
+  @include h2();
+}
+
+h3 {
+  @include h3();
+}
+
+h4 {
+  @include h4();
+}
+
+h5 {
+  @include h5();
+}
+
+h6 {
+  @include h6();
+  font-family: $ds-fonts;
+}

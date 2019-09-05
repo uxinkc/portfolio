@@ -1,3 +1,54 @@
+// Heading mixins
+@mixin title {
+  font-size: $ds-title-font-size;
+  font-weight: $ds-font-bold;
+}
+
+@mixin h1 {
+  font-size: $ds-h1-font-size;
+  font-weight: $ds-font-bold;
+}
+
+@mixin h2 {
+  font-size: $ds-h2-font-size;
+  font-weight: $ds-font-bold;
+}
+
+@mixin h3 {
+  font-size: $ds-h3-font-size;
+  font-weight: $ds-font-bold;
+}
+
+@mixin h4 {
+  font-size: $ds-h4-font-size;
+  font-weight: $ds-font-bold;
+}
+
+@mixin h5 {
+  font-size: $ds-h5-font-size;
+  font-weight: $ds-font-bold;
+}
+
+@mixin h6 {
+  font-size: $ds-h6-font-size;
+  font-weight: $ds-font-normal;
+  line-height: $ds-base-line-height;
+  text-transform: uppercase;
+}
+
+// Focus state mixin
+@mixin focus {
+  outline: $focus-outline;
+  outline-offset: $focus-spacing;
+}
+
+
+// Screen reader only helper
+@mixin sr-only() {
+  position: absolute;
+  left: -999em;
+}
+
 $breakpoints: (
   '(min-width: #{$screen-s})' 'S',
   '(min-width: #{$screen-m})' 'M',
